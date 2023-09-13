@@ -65,13 +65,8 @@ class MainActivity : AppCompatActivity() {
 
     private val locationRequest = LocationRequest.Builder(100, 1000)
         .setIntervalMillis(1000)
-        .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+        .setPriority(100)
         .build()
-        .apply {
-            val interval = 2000 // 2 seconds
-            val fastestInterval = 1000 // 1 seconds
-            val priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-        }
 
     private val locationCallback = object : LocationCallback() {
         @SuppressLint("SetTextI18n")
